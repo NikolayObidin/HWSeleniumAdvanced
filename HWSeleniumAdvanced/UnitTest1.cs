@@ -17,7 +17,6 @@ namespace HWSeleniumAdvanced
     public class Tests
     {
         private IWebDriver driver;
-        private WebDriverWait wait;
 
         [SetUp]
         public void Setup()
@@ -56,8 +55,7 @@ namespace HWSeleniumAdvanced
         {
             HomePage homePage = new HomePage(driver);
             AllProductsPage allProducts = homePage.AllProducts();
-            CheckProductPage checkNewProduct = allProducts.CheckProduct();
-            checkNewProduct.CheckProduct();
+            allProducts.Delete();
         }
 
             [TearDown]
